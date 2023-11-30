@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+:root{
+    --main_color:#53c0fbae;
+}
+.container{
+    margin: 0 auto;
+}
+body{
+    background: var(--main_color);
+}
+.content{
+    max-width: 700px;
+    display: flex;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 200px auto;
+    box-shadow: 5px 5px 20px  rgba(0, 0, 0, 0.394);
+}
+.card_add{
+    display: flex;
+    width: 400px;
+    height: 227px;
+    position: relative;
+    margin-top: -140px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.visa_card{
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: .3px black;
+    box-shadow: 1px 1px 20px black;
+    overflow: hidden;
+    position: relative;
+    transition: all 1s linear;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.front_card{
+    transform: perspective(600px) rotateY(0deg);
+}
+.back_card{
+    position: absolute;
+    transform: perspective(600px) rotateY(-180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    gap: 5px;
+}
+.back_card::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 22px;
+    left: 0;
+    background: #000000c4;
+}
+.back_card>p{
+    font-size: 15px;
+    font-weight: 700;
+    padding-right: 15px;
+}
+.card_cvv{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    letter-spacing: 10px;
+    padding-right: 10px;
+}
+.card_cvv>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-text-fill-color: black;
+    font-weight: 900;
+}
+.back_card img{
+    width: 80px;
+}
+.card_rotate_front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card_rotate_back{
+    transform: perspective(600px) rotateY(0deg);
+}
+.visa_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    row-gap: 33px;
+}
+.visa_text{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 25px 0 0 25px;
+}
+.visa_text>div{
+    width: 40px;
+    height: 25px;
+    background: #ffe603d3;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: .5px solid black;
+}
+.visa_text>div span,
+.visa_text>div ul{
+    width: 33.3%;
+    height: 33.3%;
+    border: .5px solid black;
+    border-radius: 2px 2px 2px 1px;
+    opacity: .1;
+}
+.visa_text>div ul{
+    border: none;
+}
+.visa_text img{
+    width: 70px;
+}
+.visa_number{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 10px;
+}
+.visa_number p{
+    font-size: 32px;
+    letter-spacing: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.visa_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    z-index: 10;
+}
+.visa_name,
+.visa_date{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 10px;
+}
+.visa_footer p{
+    opacity: .5;
+}
+.visa_date>div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 1.5px;
+}
+.visa_date ul{
+    font-size: 15px;
+}
+.visa_name ul{
+    font-size: 18px;
+}
+.form_url,
+.form_number,
+.form_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 22px;
+    gap: 5px;
+    width: 90%;
+    font-size: 20px;
+}
+.form_date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 95%;
+    margin-top: 22px;
+    font-size: 20px;
+}
+.form_date div{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.remove_data,
+.save_data,
+.input_url,
+.input_number,
+.input_name,
+.input_month,
+.input_year,
+.input_cvv{
+    display: flex;
+    width: 100%;
+    border: 2px solid var(--main_color);
+    height: 27px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 15px;
+    box-shadow: 1px 1px 12px var(--main_color);
+}
+.input_year,
+.input_month{
+    width: 100%;
+    max-width: 150px;
+}
+.card_focus{
+    display: flex;
+    background: #39393997;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #2f4cf3d7;
+    box-shadow: .5px .5px 7px #2f4cf3d7;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+#focus_number{
+    opacity: 1;
+    width: 350px;
+    height: 50px;
+    top: 94px;
+    left: 20px;
+}
+#focus_name{
+    opacity: 1;
+    height: 50px;
+    width: 280px;
+    top: 165px;
+    left: 12px;
+}
+#focus_date{
+    opacity: 1;
+    left: 310px;
+    top: 165px;
+    width: 85px;
+    height: 50px;
+}
+.form_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+    gap: 20px;
+}
+.remove_data,
+.save_data{
+    width: 100px;
+    height: 40px;
+    background: rgba(88, 217, 88, 0.888);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    border-radius: 20px;
+}
+.remove_data,
+.save_data p{
+    color: white;
+    font-weight: 600;
+}
+.remove_data{
+    background:rgba(217, 88, 88, 0.888);
+}

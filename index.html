@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visa</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+
+    <div class="content container">
+
+        <div class="card_add">
+            <div class="visa_card front_card" >
+                <div class="card_focus"></div>
+                <div class="visa_content">
+                    <div class="visa_text">
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <ul></ul>
+                            <span></span>
+                            <ul></ul>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <img src="logo/visa-logo-png-2020.png">
+                    </div>
+                    <div class="visa_number">
+                        <p>
+                            ####      
+                            ####
+                            ####
+                            ####
+                        </p>
+                    </div>
+                    <div class="visa_footer">
+                        <div class="visa_name">
+                            <p>Name</p>
+                            <ul></ul>
+                        </div>
+                        <div class="visa_date">
+                            <p>Expries</p>
+                            <div>
+                                <ul class="visa_date-month">##</ul>
+                                <ul>/</ul>
+                                <ul class="visa_date-year">##</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visa_card back_card">
+                <p>CVV</p>
+                <div class="card_cvv">
+                    <p></p>
+                </div>
+                <img src="logo/visa-logo-png-2020.png">
+            </div>
+        </div>
+
+        <form class="form_number" name="date">
+            <p>Card  Number</p>
+            <input type="text" class="input_number" data-input='input'>
+        </form>
+
+        <form class="form_name" name="date">
+            <p>Name</p>
+            <input type="name" class="input_name" data-input='input'>
+        </form> 
+
+        <form class="form_url" name="date">
+            <p>URL picture</p>
+            <input type="url" class="input_url" data-input='input'>
+        </form>
+
+        <form class="form_date" name="date">
+            <div>
+                <p>Expiration Date</p>
+                <input type="text" placeholder="month" class="input_month" data-input='input'>
+                <input type="text" placeholder="year" class="input_year" data-input='input'>
+            </div>
+            <div>
+                <p>CVV</p>
+                <input type="text" class="input_cvv" data-input='input'>
+            </div>
+        </form>
+
+        <div class="form_buttons">
+            <button onclick="removeInputs()" class="remove_data">
+                <p>Remove</p>
+            </button>      
+            <button onclick="saveDataInput()" class="save_data">
+                <p>Save</p>
+            </button>       
+        </div>
+    </div>
+
+    <script src="data/base.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
